@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Servicio extends Model
 {
-    use HasFactory;
+    use HasFactory;    
+    protected $primaryKey = 'id_servicio';
+    public $timestamps = false;
 }

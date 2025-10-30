@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Habitacion extends Model
 {
-    use HasFactory;
+    use HasFactory;    
+    protected $primaryKey = 'id_habitacion';
+    public $timestamps = false;
 }

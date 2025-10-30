@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Empleado extends Model
 {
     use HasFactory;    
-    protected $primaryKey = 'id_cliente';
+    protected $primaryKey = 'id_empleado';
     public $timestamps = false;
 }
