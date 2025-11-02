@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Habitacion extends Model
 {
-    use HasFactory;    
+    use HasFactory;
+    
+    protected $table = 'habitaciones'; // Agrega esta línea
     protected $primaryKey = 'id_habitacion';
+    protected $fillable = ['numero', 'tipo', 'precio', 'estado'];
     public $timestamps = false;
 }
