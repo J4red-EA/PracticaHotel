@@ -14,7 +14,7 @@
                 <div class="card shadow border-0 rounded-3">
                     <div class="card-header bg-warning text-dark py-3">
                         <h3 class="mb-0 fw-bold">Editar Empleado</h3>
-                        <small class="text-muted">ID: {{ $empleado->id_empleado }}</small>
+                        <!--<small class="text-muted">ID: {{ $empleado->id_empleado }}</small>-->
                     </div>
                     <div class="card-body p-4">
                         <form method="POST" action="{{route('empleados.update', $empleado->id_empleado)}}">
