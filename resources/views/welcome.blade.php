@@ -1,44 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menú Principal</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      text-align: center;
-      padding-top: 50px;
-    }
-
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 40px;
-    }
-
-    .menu-link {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
-
-    .menu-link:hover {
-      background-color: #2980b9;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Principal - Hotel</title>
+    {{-- La directiva de Vite carga Bootstrap --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js']) 
+    {{-- ¡Puedes eliminar la etiqueta <style> anterior! --}}
 </head>
-<body>
-  <h1>Bienvenido al sistema de gestión de Hotel</h1>
-  <a class="menu-link" href="{{ route('clientes.index') }}">Clientes</a>
-  <a class="menu-link" href="{{ route('empleados.index') }}">Empleados</a>
-  <a class="menu-link" href="{{ route('habitaciones.index') }}">Habitaciones</a>
-  <a class="menu-link" href="{{ route('servicios.index') }}">Servicios</a>
+<body class="bg-light text-center p-5">
+    <div class="container mt-5">
+        <h1 class="text-primary mb-4">Bienvenido al Sistema de Gestión de Hotel</h1>
+        
+        <div class="d-grid gap-3 col-md-8 mx-auto">
+            {{-- Usamos clases de Bootstrap (btn, btn-info, w-100 para ancho completo) --}}
+            <a class="btn btn-lg btn-info text-white my-2" href="{{ route('clientes.index') }}">Clientes</a>
+            <a class="btn btn-lg btn-warning text-dark my-2" href="{{ route('empleados.index') }}">Empleados</a>
+            <a class="btn btn-lg btn-success my-2" href="{{ route('habitaciones.index') }}">Habitaciones</a>
+            <a class="btn btn-lg btn-danger my-2" href="{{ route('servicios.index') }}">Servicios</a>
+        </div>
+        
+    </div>
 </body>
 </html>
